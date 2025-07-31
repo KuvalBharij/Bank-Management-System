@@ -1,0 +1,7 @@
+<h2>Add Account</h2>
+<form method="post">
+  {% for field in ['accno','name','mobile','email','address','city','country','balance'] %}
+    <input name="{{ field }}" placeholder="{{ field|capitalize }}" required><br>
+  {% endfor %}
+  <button type="submit">Add</button>
+</form>

@@ -1,0 +1,16 @@
+<h2>All Accounts</h2>
+<table border="1">
+  <tr>
+    <th>Acc No</th><th>Name</th><th>Mobile</th><th>Email</th>
+    <th>Address</th><th>City</th><th>Country</th><th>Balance</th><th>Actions</th>
+  </tr>
+  {% for acc in accounts %}
+  <tr>
+    {% for col in acc %}<td>{{ col }}</td>{% endfor %}
+    <td>
+      <a href="/update/{{ acc[0] }}">Edit</a> |
+      <a href="/delete/{{ acc[0] }}">Delete</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>

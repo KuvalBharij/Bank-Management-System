@@ -1,0 +1,13 @@
+<h2>Search Account</h2>
+<form method="post">
+  <input name="accno" placeholder="Account Number">
+  <button type="submit">Search</button>
+</form>
+{% if account %}
+  <h3>Result:</h3>
+  <ul>
+    {% for field in account %}
+      <li>{{ field }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}

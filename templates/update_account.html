@@ -1,0 +1,8 @@
+<h2>Update Account</h2>
+<form method="post">
+  {% set fields = ['name','mobile','email','address','city','country','balance'] %}
+  {% for i in range(1, 8) %}
+    <input name="{{ fields[i-1] }}" value="{{ account[i] }}"><br>
+  {% endfor %}
+  <button type="submit">Update</button>
+</form>
